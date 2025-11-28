@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="seed-countries" author="denis">
+        <insert tableName="countries">
+            <column name="name" value="Kazakhstan"/>
+            <column name="code" value="KZ"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="name" value="United States"/>
+            <column name="code" value="US"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="name" value="China"/>
+            <column name="code" value="CN"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="name" value="Germany"/>
+            <column name="code" value="DE"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="name" value="Japan"/>
+            <column name="code" value="JP"/>
+        </insert>
+        <insert tableName="countries">
+            <column name="name" value="South Korea"/>
+            <column name="code" value="KR"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
