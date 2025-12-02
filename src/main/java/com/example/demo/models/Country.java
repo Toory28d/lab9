@@ -1,23 +1,22 @@
 package com.example.demo.models;
-
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "countries")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Country {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(name = "code", nullable = false, unique = true)
+    @Column(nullable = false, unique = true, length = 3)
     private String code;
 }

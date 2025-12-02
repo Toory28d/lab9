@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  main-db:
+    image: postgres:16
+    container_name: main-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shopdb
+    ports:
+      - "2345:5432"
+
+  test-db:
+    image: postgres:16
+    container_name: test-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shopdb_test
+    ports:
+      - "2346:5432"
