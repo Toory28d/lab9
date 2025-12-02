@@ -19,7 +19,7 @@ public class CountryService {
 
     public List<CountryDto> findAll() {
         return countryRepository.findAll().stream()
-                .map(mapper::toDto)  // ← теперь метод существует!
+                .map(mapper::toDto)
                 .toList();
     }
 
