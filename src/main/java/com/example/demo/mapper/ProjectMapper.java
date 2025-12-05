@@ -7,20 +7,19 @@ import org.mapstruct.Mapping;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = {CategoryMapper.class, TaskMapper.class})
+@Mapper(componentModel = "spring", uses = CategoryMapper.class)
 public interface ProjectMapper {
-
     @Mapping(target = "id", source = "id")
     @Mapping(target = "name", source = "name")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "categories", source = "categories")
+    @Mapping(target = "description", source ="description")
+    @Mapping(target = "categories", source ="categories")
     @Mapping(target = "tasks", source = "tasks")
     ProjectDTO toDto(Project entity);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "name", source = "name")
-    @Mapping(target = "description", source = "description")
-    @Mapping(target = "categories", source = "categories")
+    @Mapping(target = "description", source ="description")
+    @Mapping(target = "categories", source ="categories")
     @Mapping(target = "tasks", source = "tasks")
     Project toEntity(ProjectDTO dto);
 

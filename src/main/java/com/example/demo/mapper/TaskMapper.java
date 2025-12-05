@@ -9,19 +9,18 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
-
     @Mapping(target = "id", source = "id")
     @Mapping(target = "title", source = "title")
     @Mapping(target = "details", source = "details")
-    @Mapping(target = "status", source = "status")
+    @Mapping(target= "status",source = "status")
     @Mapping(target = "projectId", source = "project.id")
     TaskDTO toDto(Task entity);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "title", source = "title")
     @Mapping(target = "details", source = "details")
-    @Mapping(target = "status", source = "status")
-    @Mapping(target = "project", ignore = true)
+    @Mapping(target= "status",source = "status")
+    @Mapping(target = "project", ignore=true)
     Task toEntity(TaskDTO dto);
 
     List<TaskDTO> toDtos(List<Task> entities);

@@ -52,7 +52,6 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = categoryRepository.findById(id).orElse(null);
         if (category == null) return false;
 
-        // remove many-to-many relations
         List<Project> projects = category.getProjects();
         if (projects != null) {
             projects.forEach(project -> project.getCategories().remove(category));

@@ -3,8 +3,7 @@ package com.example.demo.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Data
 @NoArgsConstructor

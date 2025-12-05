@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.dto.TaskDTO;
+import com.example.demo.entity.Task;
 
 import java.util.List;
 
