@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class TaskDTO {
+public class ItemRequestDto {
     private Long id;
-    private String title;
-    private String details;
-    private int status;
-    private Long projectId;
+    private String name;
+    private int price;
+    private int quantity;
+    private Long manufacturerId;
+
 }

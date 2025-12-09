@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Item Form</title>
+</head>
+<body>
+<h1>Item Form</h1>
+<form th:action="@{/items}" th:object="${item}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <label>Name: <input type="text" th:field="*{name}" required /></label><br/>
+    <label>Price: <input type="number" th:field="*{price}" required /></label><br/>
+    <label>Quantity: <input type="number" th:field="*{quantity}" required /></label><br/>
+    <label>Manufacturer:
+        <select th:field="*{manufacturerId}" required>
+            <option value="">-- Select --</option>
+            <option th:each="country : ${countries}"
+                    th:value="${country.id}"
+                    th:text="${country.name}"></option>
+        </select>
+    </label><br/>
+    <button type="submit">Save</button>
+</form>
+<a th:href="@{/items}">Back to List</a>
+</body>
+</html>

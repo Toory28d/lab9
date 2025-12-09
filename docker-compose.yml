@@ -3,20 +3,20 @@ version: '3.1'
 services:
   main-db:
     image: postgres:16
-    container_name: main-db
+    container_name: main-db12
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: shopdb
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: lab100
     ports:
       - "2345:5432"
 
   test-db:
     image: postgres:16
-    container_name: test-db
+    container_name: test-db12
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: shopdb_test
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: lab100_test
     ports:
       - "2346:5432"

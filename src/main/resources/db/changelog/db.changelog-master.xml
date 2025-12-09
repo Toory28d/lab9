@@ -3,9 +3,12 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.19.xsd">
 
-    <include file="changes/001-create-tables.xml" relativeToChangelogFile="true"/>
-    <include file="changes/002-insert-data.xml" relativeToChangelogFile="true"/>
+    <include file="changes/001-create-countries-table.xml" relativeToChangelogFile="true"/>
+    <include file="changes/002-create-items-table.xml" relativeToChangelogFile="true"/>
+    <include file="changes/003-add-foreign-key.xml" relativeToChangelogFile="true"/>
+    <include file="changes/004-insert-countries.xml" relativeToChangelogFile="true"/>
+    <include file="changes/005-insert-items.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
